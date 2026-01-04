@@ -1,0 +1,9 @@
+name: Output on issue
+on: issues
+
+jobs:
+  infonissue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output on issue
+        run: echo "${{ toJOSN(github.event) }}"
